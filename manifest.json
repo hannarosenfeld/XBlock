@@ -1,11 +1,15 @@
 {
   "manifest_version": 3,
   "name": "X Styler",
-  "version": "1.0",
-  "description": "Modify X.com styles",
+  "version": "1.2",
+  "permissions": ["scripting", "declarativeNetRequest"],
+  "host_permissions": ["x.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
   "content_scripts": [
     {
-      "matches": ["https://x.com/*"],
+      "matches": ["x.com/*"],
       "js": ["index.js"],
       "run_at": "document_idle"
     }
