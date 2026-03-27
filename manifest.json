@@ -3,13 +3,13 @@
   "name": "X Styler",
   "version": "1.2",
   "permissions": ["scripting", "declarativeNetRequest"],
-  "host_permissions": ["x.com/*"],
+  "host_permissions": ["https://x.com/*"],
   "background": {
     "service_worker": "background.js"
   },
   "content_scripts": [
     {
-      "matches": ["x.com/*"],
+      "matches": ["https://x.com/*"],
       "js": ["index.js"],
       "run_at": "document_idle"
     }
